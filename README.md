@@ -11,6 +11,14 @@ A small, reversible helper for checking and applying a build-specific D3D12 DLL 
 
 It does not download, include, or redistribute game files. It does not edit `rex_sp.dll`, alter DRM or anti-cheat components, patch a running game process, or launch the game. Use a launch method already supported by your own installation.
 
+## What the artifacts looked like
+
+This photo was supplied by the repository maintainer and shows the rendering artifacts observed before applying the workaround:
+
+![Phone photo showing rendering artifacts in the campaign scene](docs/images/artifacts-observed.jpg)
+
+The maintainer reported that the artifacts were absent after using the matching D3D12 DLL pair. There is no matching after-photo in this report, so this image documents the problem rather than serving as a before/after comparison.
+
 ## Requirements
 
 - A local installation with the expected directory layout and build ID `25909941`.
@@ -28,12 +36,12 @@ The script stops if the build ID or either source hash differs. A matching build
 
 ## Use
 
-Clone the repository, then make the main script executable if needed:
+Clone the repository and make the script executable:
 
 ```bash
 git clone https://github.com/Soldier0x0/mw4-patch-linux.git
 cd mw4-patch-linux
-bash ./make-executable.sh
+chmod +x ./community-artifact-fix.sh
 ```
 
 Check the files first. Replace the example path with the installation root, meaning the folder that contains `game/`:
