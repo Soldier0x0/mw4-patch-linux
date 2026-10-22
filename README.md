@@ -13,11 +13,17 @@ It does not download, include, or redistribute game files. It does not edit `rex
 
 ## What the artifacts looked like
 
-This photo was supplied by the repository maintainer and shows the rendering artifacts observed before applying the workaround:
+Both photos were taken by the repository maintainer with a mobile phone. In-game screen capture was not working, and the maintainer chose not to install another capture tool. GPS and other EXIF metadata were stripped before publication.
+
+**Before the workaround:**
 
 ![Phone photo showing rendering artifacts in the campaign scene](docs/images/artifacts-observed.jpg)
 
-The maintainer reported that the artifacts were absent after using the matching D3D12 DLL pair. There is no matching after-photo in this report, so this image documents the problem rather than serving as a before/after comparison.
+**After applying the matching D3D12 DLL pair, with ray tracing off:**
+
+![Phone photo of the same campaign area after the rendering artifacts were fixed](docs/images/artifacts-after.jpg)
+
+The maintainer reported the artifacts absent in the after photo and said the game ran smoothly at the Extreme preset for about five minutes. These are personal observations from one PC, not a guarantee for other systems.
 
 ## Requirements
 
@@ -73,10 +79,10 @@ For a specific backup, pass its directory before `--game-root`:
 - Zorin OS 18.1
 - NVIDIA GeForce RTX 3060 12 GB, NVIDIA driver 595.99.02
 - GE-Proton 11-9, UMU 1.4.4, Steam Runtime 4
-- With ray tracing off, the game was smooth and the artifacts were absent during an observed session of about five minutes.
-- With ray tracing on, the user reported severe lag and about 11.5 GB of NVIDIA GPU memory in use. This is GPU memory (VRAM), not system RAM. The observation does not prove the sole cause of the lag.
+- With ray tracing off and the Extreme graphics preset, the game was smooth and the artifacts were absent during an observed session of about five minutes.
+- The game offers ray tracing Off, Low, and High. With ray tracing enabled, the user reported severe lag and about 11.5 GB of NVIDIA GPU memory in use. This is GPU memory (VRAM), not system RAM. The observation does not prove the sole cause of the lag.
 
-These results come from one PC. Other hardware, drivers, runtimes, game files, and settings may behave differently. This workaround does not claim to fix ray tracing performance, audio, or unrelated crashes. Ray tracing off is the only configuration in this report that was observed to run smoothly.
+These results come from one PC. Other hardware, drivers, runtimes, game files, and settings may behave differently. This workaround addresses the observed rendering artifacts; it does not claim to fix ray-tracing performance, audio, or unrelated issues. Ray tracing off is the only configuration in this report that was observed to run smoothly.
 
 ## Legal and safety notes
 
